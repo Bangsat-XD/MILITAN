@@ -4,7 +4,7 @@
 #		  GITHUB : github.com/Dumai-991			#
 #	       FACEBOOK : m.facebook.com/GARANGAN.KECHE		#
 #################################################################
-#By ☆ RAKA ☆ ™︻®╤───────═◍➤
+#By Bangsat-XD
 import os
 import sys
 import time
