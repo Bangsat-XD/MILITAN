@@ -335,9 +335,9 @@ def bapi(user):
 				break
 				continue
 			elif "www.facebook.com" in send.json()["error_msg"]:
-				print("\r\033[0;96m[RAKA_AMANDA] %s|%s\033[0;96m        "%(uid, pw))
-				cp.append("%s|%s"%(uid, pw))
-				open("CP/%s.txt"%(tBilall),"a").write(" + %s|%s\n"%(uid, pw))
+				print("\r\033[0;96m[RAKA_AMANDA] %s • %s\033[0;96m        "%(uid, pw))
+				cp.append("%s • %s"%(uid, pw))
+				open("CP/%s.txt"%(tBilall),"a").write(" + %s • %s\n"%(uid, pw))
 				break
 				continue
 
