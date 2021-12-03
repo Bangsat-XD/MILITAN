@@ -154,7 +154,7 @@ def menu():
 		print("\033[1;96m[\033[1;93m1\033[1;96m] \033[1;92mAngga \033[1;96m™\033[1;97m Check results RAKA_AMANDA OK")
 		print("\033[1;96m[\033[1;93m2\033[1;96m] \033[1;92mAngga \033[1;96m™\033[1;97m Check results RAKA_AMANDA CP")
 		print(" ")
-		cek = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92mAngga \033[1;96m™\033[1;97m Option : ")
+		cek = raw_input("\033[1;96m[\033[1;93m+\033[1;96m] \033[1;92mAngga \033[1;96m™\033[1;97m Option  : ")
 		if cek =="":
 			menu()
 		elif cek == "1":
