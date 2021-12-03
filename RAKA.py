@@ -203,7 +203,7 @@ def publik():
 		token = open("login.txt", "r").read()
 	except IOError:
 		exit("\n\033[1;96m[\033[1;93m!\033[1;96m] Token Error")
-	idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id      : ")
+	idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id       : ")
 	try:
 		for i in requests.get("https://graph.facebook.com/%s/friends?access_token=%s"%(idt, token)).json()["data"]:
 			uid = i["id"]
@@ -211,7 +211,7 @@ def publik():
 			id.append(uid+"<=>"+nama)
 	except KeyError:
 		exit("\033[1;93m◍➤\033[1;97m Account friend list is not public")
-	print("\033[1;93m◍➤\033[1;97m Total Id     : \033[0;91m%s\033[0;97m"%(len(id))) 
+	print("\033[1;93m◍➤\033[1;97m Total Id        : \033[0;91m%s\033[0;97m"%(len(id))) 
 
 def follower():
 	global token
@@ -219,7 +219,7 @@ def follower():
 		token = open("login.txt", "r").read()
 	except IOError:
 		exit("\n\033[1;96m[\033[1;94m+\033[1;96m] Token Error")
-	idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id       : ")
+	idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id        : ")
 	try:
 		for i in requests.get("https://graph.facebook.com/%s/subscribers?limit=5000&access_token=%s"%(idt, token)).json()["data"]:
 			uid = i["id"]
@@ -240,7 +240,7 @@ def massal():
 	except:tanya_Total=1
 	for t in range(tanya_Total):
 		t +=1
-		idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id %s    : "%(t))
+		idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id %s     : "%(t))
 		try:
 			for i in requests.get("https://graph.facebook.com/%s/friends?access_token=%s"%(idt, token)).json()["data"]:
 				uid = i["id"]
@@ -248,7 +248,7 @@ def massal():
 				id.append(uid+"<=>"+nama)
 		except KeyError:
 			print("\033[1;93m◍➤\033[1;97m  Ids friend list Is not public")
-	print("\033[1;93m◍➤\033[1;97m Total id : \033[0;92m%s\033[0;96m"%(len(id)))
+	print("\033[1;93m◍➤\033[1;97m Total id    : \033[0;92m%s\033[0;96m"%(len(id)))
 
 def method():
 	print("\033[1;93m◍➤\033[1;97m Choose crack methode [ \033[1;92mRecommended B-API \033[1;97m]")
