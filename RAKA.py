@@ -135,7 +135,7 @@ def menu():
 	print("\033[1;96m[\033[1;93m5\033[1;96m]\033[1;92m─ ® ─\033[1;97m User-agent settings \033[1;97m [ \033[1;95mPro \033[1;97m]")
 	print("\033[1;96m[\033[1;93m6\033[1;96m]\033[1;92m─ ® ─\033[1;97m Exit\033[1;97m [ \033[1;91mRemove-Token \033[1;97m]")
 		
-	Bilal = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92m─ ® ─\033[1;97m Option  : ")
+	Bilal = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92m─ ® ─\033[1;97m Option : ")
 	if Bilal =="":
 		menu()
 	elif Bilal == "1" or Bilal == "01":
@@ -152,7 +152,7 @@ def menu():
 		print("\033[1;96m[\033[1;93m1\033[1;96m]\033[1;92m─ ® ─\033[1;97m Check results RAKA_AMANDA OK")
 		print("\033[1;96m[\033[1;93m2\033[1;96m]\033[1;92m─ ® ─\033[1;97m Check results RAKA_AMANDA CP")
 		print(" ")
-		cek = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92m─ ® ─\033[1;97m Option  : ")
+		cek = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92m─ ® ─\033[1;97m Option : ")
 		if cek =="":
 			menu()
 		elif cek == "1":
@@ -201,7 +201,7 @@ def publik():
 		token = open("login.txt", "r").read()
 	except IOError:
 		exit("\n\033[1;96m[\033[1;93m!\033[1;96m] Token Error")
-	idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id     : ")
+	idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id    : ")
 	try:
 		for i in requests.get("https://graph.facebook.com/%s/friends?access_token=%s"%(idt, token)).json()["data"]:
 			uid = i["id"]
@@ -209,7 +209,7 @@ def publik():
 			id.append(uid+"<=>"+nama)
 	except KeyError:
 		exit("\033[1;93m◍➤\033[1;97m Account friend list is not public")
-	print("\033[1;93m◍➤\033[1;97m Total Id      : \033[0;91m%s\033[0;97m"%(len(id))) 
+	print("\033[1;93m◍➤\033[1;97m Total Id     : \033[0;91m%s\033[0;97m"%(len(id))) 
 
 def follower():
 	global token
@@ -225,7 +225,7 @@ def follower():
 			id.append(uid+"<=>"+nama)
 	except KeyError:
 		exit("\033[1;93m◍➤\033[1;97m Account friend list is not public")
-	print("\033[1;93m◍➤\033[1;97m Total Id      : \033[0;91m%s\033[0;97m"%(len(id))) 
+	print("\033[1;93m◍➤\033[1;97m Total Id     : \033[0;91m%s\033[0;97m"%(len(id))) 
 
 def massal():
 	global token
@@ -234,11 +234,11 @@ def massal():
 	except IOError:
 		exit("\033[1;96m[\033[1;94m+\033[1;96m] Token Error")
 	try:
-		tanya_Total = int(input("\033[1;93m◍➤\033[1;97m Enter Multiple ID Option  : "))
+		tanya_Total = int(input("\033[1;93m◍➤\033[1;97m Enter Multiple ID Option : "))
 	except:tanya_Total=1
 	for t in range(tanya_Total):
 		t +=1
-		idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id %s   : "%(t))
+		idt = raw_input("\033[1;93m◍➤\033[1;97m Target Id %s  : "%(t))
 		try:
 			for i in requests.get("https://graph.facebook.com/%s/friends?access_token=%s"%(idt, token)).json()["data"]:
 				uid = i["id"]
@@ -246,14 +246,14 @@ def massal():
 				id.append(uid+"<=>"+nama)
 		except KeyError:
 			print("\033[1;93m◍➤\033[1;97m  Ids friend list Is not public")
-	print("\033[1;93m◍➤\033[1;97m Total id  : \033[0;92m%s\033[0;96m"%(len(id)))
+	print("\033[1;93m◍➤\033[1;97m Total id : \033[0;92m%s\033[0;96m"%(len(id)))
 
 def method():
 	print("\033[1;93m◍➤\033[1;97m Choose crack methode [ \033[1;92mRecommended B-API \033[1;97m]")
 	print("\033[1;96m[\033[1;93m1\033[1;96m]\033[1;92m─ ® ─ \033[1;97mB-API\033[1;97m [ \033[1;95mFast \033[1;97m]")
 	print("\033[1;96m[\033[1;93m2\033[1;96m]\033[1;92m─ ® ─ \033[1;97mM-Basic\033[1;97m [ \033[1;95mFast \033[1;97m]")
 	print("\033[1;96m[\033[1;93m3\033[1;96m]\033[1;92m─ ® ─ \033[1;97mFree Facebook\033[1;97m [ \033[1;95mNormal \033[1;97m]")
-	method = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92m─ ® ─ \033[1;97mOption  : ")
+	method = raw_input("\033[1;96m[\033[1;93m+\033[1;96m]\033[1;92m─ ® ─ \033[1;97mOption : ")
 	if method == "":
 		menu()
 	elif method == "1":
