@@ -259,21 +259,21 @@ def method():
 	if method == "":
 		menu()
 	elif method == "1":
-		ask = raw_input("\033[1;93m◍➤\033[1;97m Do you choose manual passwors ? y/t\033[1;97m [\033[1;92mDefault : t\033[1;97m] : ")
+		ask = raw_input("\033[1;93m◍➤\033[1;97m Do you choose manual passwors ? y/t\033[1;97m [ \033[1;92mDefault: t\033[1;97m ] : ")
 		if ask == "y":
 			manual()
 		print(" ")
 		ThreadPool(30).map(bapi, id)
 		exit("Program End")
 	elif method == "2":
-		ask = raw_input("\033[1;93m◍➤\033[1;97m Do you choose manual passwords  y/t\033[1;97m [\033[1;92mDefault : t\033[1;97m] ")
+		ask = raw_input("\033[1;93m◍➤\033[1;97m Do you choose manual passwords ? y/t\033[1;97m [ \033[1;92mDefault: t\033[1;97m ] ")
 		if ask == "y":
 			manual()
 		print(" ")
 		ThreadPool(30).map(mbasic, id)
 		exit("Program End")
 	elif method == "3":
-		ask = raw_input("\033[1;93m◍➤[\033[1;94m!\033[1;97m] Do you choose manual passwords y/t\033[1;97m [\033[1;92mDefault : t\033[1;97m] ")
+		ask = raw_input("\033[1;93m◍➤[\033[1;94m!\033[1;97m] Do you choose manual passwords ? y/t\033[1;97m [ \033[1;92mDefault: t\033[1;97m ] ")
 		if ask == "y":
 			manual()
 		print(" ")
