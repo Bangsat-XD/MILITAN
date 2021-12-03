@@ -227,7 +227,7 @@ def follower():
 			id.append(uid+"<=>"+nama)
 	except KeyError:
 		exit("\033[1;93m◍➤\033[1;97m Account friend list is not public")
-	print("\033[1;93m◍➤\033[1;97m Total Id     : \033[0;91m%s\033[0;97m"%(len(id))) 
+	print("\033[1;93m◍➤\033[1;97m Total Id        : \033[0;91m%s\033[0;97m"%(len(id))) 
 
 def massal():
 	global token
